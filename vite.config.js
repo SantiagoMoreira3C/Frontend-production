@@ -6,9 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    
     vue(),
-
   ],
   define: {
     'process.env': {}
@@ -18,4 +16,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    port: 5173,
+    host: true
+  },
+  preview: {
+    port: 8080,
+    host: true
+  }
 })
